@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial scale=1.0/">
+        <title>WeatherHub</title>
+        <link rel="stylesheet" type="text/css" href="../style.css"/>
+        <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+        rel="stylesheet"
+        type="text/css"
+        />
+    </head>
+    <body>
+            <img class="logimg" src="../images/Logo.png" >
+
+        <div class="container-fluid">
+            <p>WeatherHub</p>
+        </div>
+        <button class="open-button" onclick="openForm()">Feedback</button>
+        <button class="about-button" onclick="openForm1()">About</button>
+        <div class="about-popup" id="about">
+          <b>Author: Somthirtha Bhwomik.<br>Created this page as a part time Diwali project.<br>A quick attempt on NodeJS and ExpressJS.
+          <br><br>Sadly, can't really manage the mail system.<br>So the feedback isn't gonna reach me.<br>So don't keep writing expecting that'd reach me.<br><br></b>
+          <button class="close-button" onclick="closeForm1()">Close</button>
+        </div>
+
+        <div class="form-popup" id="myForm">
+          <form action="" class="form-container">
+            <h1>Feedback</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Feedback</b></label>
+            <input type="text" placeholder="Enter your feedback" name="fdb" required>
+        
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+
+
+        <div class="container">
+          <fieldset>
+            <form action="/" method="POST" autocomplete="off">
+            <input name="city" type="text" placeholder="Enter City Name" required class="ghost-input"/>
+            <input name="submit" type="submit" value="Know Weather" class="ghost-button"/>
+            <input name="clear" type="button" onclick="f()" placeholder="Clear" value="Clear" class="reset-button"/>
+            </form>
+          
+
+            <% if(weather!== null){%>
+              <p id="p1"><%= weather %></p>
+              <p id="p2"><%= weather1 %></p>
+              <p id="p3"><%= weather2 %></p>
+            <% } %>
+            <% if(error!==null){%>
+              <p id="para">Oops! Can't find this! Please try another city!</p>
+            <% } %>
+          </fieldset>
+        </div>
+        <script> 
+          function f(){
+            document.getElementById("p1").innerHTML = "";
+            document.getElementById("p2").innerHTML = "";
+            document.getElementById("p3").innerHTML = "";
+            document.getElementById("para").innerHTML = "";
+          } 
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+          function openForm1() {
+            document.getElementById("about").style.display = "block";
+          }
+
+          function closeForm1() {
+            document.getElementById("about").style.display = "none";
+          }
+
+        </script>
+    </body>
+</html>

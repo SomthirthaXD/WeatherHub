@@ -1,0 +1,468 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    background: url("../images/image.jpg");
+    /*<a href="https://www.freepik.com/free-vector/color-seamless-space-pattern_10838001.htm#page=2&query=repeat%20pattern&position=9&from_view=search&track=sph">Image by tartila</a> on Freepik.*/
+    background-size: cover;
+  }
+  .logimg{
+  position: absolute;
+  width: 8px;
+  margin: 10px auto;
+  top: 5%;
+  left: 45%;
+  height:170px;
+  width:170px;
+  }
+
+  .container-fluid{
+  position: absolute;
+  width: 800px;
+  margin: 10px auto;
+  top: 16%;
+  left: 40%;
+  color:antiquewhite;
+  font-size: 70px;
+  font-weight:700;
+  font-family:'fantasy', serif;
+  }
+
+  .container{
+  position:fixed;
+  width: 600px;
+  margin: 10px auto;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.7;
+  background-color:darksalmon;
+  border-radius: 10px;
+  }
+  fieldset {
+  display: block;
+  width: 520px;
+  color:#040027;
+  font-size: 25px;
+  font-weight: 360;
+  position:relative;
+
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-before: 0em;
+  -webkit-padding-start: 0em;
+  -webkit-padding-end: 0em;
+  -webkit-padding-after: 0em;
+  border: 10px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  min-width: -webkit-min-content;
+  padding: 40px;
+  opacity: 1;
+  }
+  .ghost-input {
+  display: block;
+  position: relative;
+  left: 0%;
+  font-weight:300;
+  width: 300%;
+  font-size: 25px;
+  border:0.2px solid rgb(255, 255, 255);
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #040027;
+  background:burlywood;
+  font-family: Open Sans,Verdana;
+  padding: 10px 15px;
+  margin: 30px 0px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  }
+  .ghost-input:focus {
+  border-bottom:1px solid rgb(14, 2, 65);
+  }
+  .ghost-button {
+  display: block;
+  offset-distance: 10px;
+  font-size: 25px;
+  font-weight: 300;
+  position: relative;
+  left: 0%;
+  color:#040027;
+  background-color:burlywood;
+  border:0.2px solid rgb(255, 255, 255);
+  padding:10px 30px; 
+  width: 100%;
+  min-width: 350px;
+  text-size-adjust: 100px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  }
+  .ghost-button:hover {
+  border:0.2px solid #040027;
+  }
+  .ghost-input:hover {
+  border-bottom:0.2px solid #040027;
+  }
+  .reset-button{
+  offset-distance: 100px;
+  position:relative;
+  font-size: 15px;
+  font-weight: 300;
+  left: 35%;
+  color:#040027;
+  background-color:burlywood;
+  border:0.2px solid rgb(255, 255, 255);
+  padding:5px 10px; 
+  width: 30%;
+  min-width: 50px;
+  text-size-adjust: 100px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  }
+  .reset-button:hover {
+  border:0.2px solid #040027;
+  }
+
+  .about-button {
+  background-color: #555;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  width: 100px;
+  font-size:medium;
+  text-align: center;
+  }
+
+  .open-button {
+  background-color: #555;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 100px;
+  font-size:medium;
+  text-align: center;
+  }
+
+  .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #040027;
+  z-index: 9;
+  }
+
+  .form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  }
+  .about-popup {
+  display:none;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  border: 3px solid #040027;
+  position: fixed;
+  z-index:9;
+  }
+
+
+  .form-container input[type=text], .form-container input[type=text] {
+  width: 100%;
+  padding: 2px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #f1f1f1;
+  }
+
+
+  .form-container input[type=text]:focus, .form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+  border:0.2px solid #040027;
+  }
+  .form-container input[type=text]:hover, .form-container input[type=text]:hover{
+  border:0.2px solid #040027;
+  }
+
+
+  .form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  }
+  .about {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  }
+  .about-popup .close-button {
+  background-color: red;
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  }
+
+
+  .form-container .cancel {
+  background-color: red;
+  }
+
+  .form-container .btn:hover, .open-button:hover, .about-button:hover, .about-popup .close-button:hover {
+  border:0.2px solid #040027;
+  }
+
+  @media screen and (max-width:470px) {
+    .logimg{
+      position: absolute;
+      margin: 10px auto;
+      top: 1%;
+      left: 40%;
+      height: 80px;
+      width: 80px;
+    }
+    .container-fluid {
+      position:fixed;
+      top:-36%;
+      left:-66%;
+      margin: 300px;
+      font-size:50px;
+    }
+    .container{
+      position:fixed;
+      width: 454px;
+      margin: 8px auto;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0.7;
+      background-color:darksalmon;
+      border-radius: 8px;
+      text-align:left;
+    }
+    fieldset{
+      font-size: 22px;
+      top: 60%;
+    }
+    .ghost-input {
+      display: block;
+      position: relative;
+      left: -2.5%;
+      font-weight:300;
+      width: 300%;
+      font-size: 25px;
+      border:0.2px solid rgb(255, 255, 255);
+      outline: none;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #040027;
+      background:burlywood;
+      font-family: Open Sans,Verdana;
+      padding: 10px 15px;
+      margin: 30px 0px;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
+      width: 400px;
+    }
+  
+    .reset-button{
+      offset-distance: 100px;
+      position:relative;
+      font-size: 15px;
+      font-weight: 300;
+      left: 26.5%;
+      color:#040027;
+      background-color:burlywood;
+      border:0.2px solid rgb(255, 255, 255);
+      padding:5px 10px; 
+      width: 30%;
+      min-width: 50px;
+      text-size-adjust: 100px;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
+      width: 100px;
+    }
+    .ghost-button {
+      display: block;
+      offset-distance: 10px;
+      font-size: 25px;
+      font-weight: 300;
+      position: relative;
+      left: -2.5%;
+      color:#040027;
+      background-color:burlywood;
+      border:0.2px solid rgb(255, 255, 255);
+      padding:10px 30px; 
+      width: 100%;
+      width: 400px;
+      min-width: 350px;
+      text-size-adjust: 100px;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+
+
+  @media screen and (max-width:770px) and (min-width:471px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    background-size:cover;
+  }
+  .container-fluid{
+    position: fixed;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    margin: 10px auto;
+    top: 18%;
+    left: 82%;
+    color:antiquewhite;
+    font-size: 60px;
+    font-weight:700;
+    font-family:'fantasy', serif;
+  }
+  .container{
+    position:fixed;
+    width: 454px;
+    margin: 8px auto;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.7;
+    background-color:darksalmon;
+    border-radius: 8px;
+    text-align:left;
+  }
+  fieldset{
+    font-size: 22px;
+    top: 60%;
+  }
+  .logimg{
+    position: absolute;
+    width: 8px;
+    margin: 10px auto;
+    top: 0%;
+    left: 43%;
+    height: 120px;
+    width:120px;
+  }
+
+  .ghost-input {
+    display: block;
+    position: relative;
+    left: -2.5%;
+    font-weight:300;
+    width: 300%;
+    font-size: 25px;
+    border:0.2px solid rgb(255, 255, 255);
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #040027;
+    background:burlywood;
+    font-family: Open Sans,Verdana;
+    padding: 10px 15px;
+    margin: 30px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    width: 400px;
+  }
+
+  .reset-button{
+    offset-distance: 100px;
+    position:relative;
+    font-size: 15px;
+    font-weight: 300;
+    left: 26.5%;
+    color:#040027;
+    background-color:burlywood;
+    border:0.2px solid rgb(255, 255, 255);
+    padding:5px 10px; 
+    width: 30%;
+    min-width: 50px;
+    text-size-adjust: 100px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    width: 100px;
+  }
+  .ghost-button {
+    display: block;
+    offset-distance: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    left: -2.5%;
+    color:#040027;
+    background-color:burlywood;
+    border:0.2px solid rgb(255, 255, 255);
+    padding:10px 30px; 
+    width: 100%;
+    width: 400px;
+    min-width: 350px;
+    text-size-adjust: 100px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  }
