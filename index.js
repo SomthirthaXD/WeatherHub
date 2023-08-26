@@ -4,7 +4,7 @@ const request=require('request');
 
 const app= express();
 
-const apiKey="4ba4b4e251f3db844d3894246cedbc80";
+const apiKey=""; //Key removed
 
 const PORT = process.env.PORT || 3000;
 
